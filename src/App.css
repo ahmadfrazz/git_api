@@ -1,38 +1,487 @@
-.App {
-  text-align: center;
+/********************************************
+----- Dark Mode -----
+*********************************************/
+
+ /* 
+ =dark=
+#141D2F
+
+ =light= 
+ #1E2A47 
+
+ =more_light=
+ #4B6A9B
+ */
+/* --------------------------Login/Register-------------------------- */
+#D_logincontainer{
+    background-color: #1E2A47;
+    margin-top: 10%;
+    border-radius: 10px;
+    box-shadow: 0 10px 37px -18px #000;
+    padding: 40px;
+    max-width: 450px;
+}
+#loginForm{
+    font-family: 'Segoe UI Light';
+    font-size: 16px;
+}
+#D_regbtn{
+    color: white;
+    width: 100%;
+}
+#D_login_btn{
+    width: 100%;
+}
+#D_divider{
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    display: grid;
+    grid-template-columns: auto 200px auto; 
+}
+#D_dividerText{
+    color: #7a8192;
+    text-align: center;
+}
+#D_logininput{
+    background-color: #141D2F;
+    color: white;
+}
+#D_loginHeader{
+    color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+/* --------------------------App-------------------------- */
+#D_container {
+    margin: auto;
+    max-width: 750px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#D_bodyStyle {
+    margin-top: 40px;
+}
+#D_app {
+    font-family: 'Segoe UI';
+    background-color: #141D2F;
+    color: #FFFFFF;
+    min-height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+/* --------------------------Header-------------------------- */
+#D_headerStyle {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
 }
 
-.App-link {
-  color: #61dafb;
+#D_logoStyle {
+    font-size: 28px;
+    margin-top: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#D_dLightStyle {
+    margin-top: 50px;
+    font-size: 16px;
+    text-align: right;
+    font-family: 'Segoe UI Light';
+    cursor: pointer;
+}
+
+#D_dLightTextStyle {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+
+
+
+/* --------------------------SearchBar-------------------------- */
+#D_errorStyle {
+    display: flex;
+    justify-content: right;
+    color: red;
+    font-size: 16px;
+    font-family: 'Segoe UI Light';
+}
+#D_SearchbgColor {
+    background-color: #1E2A47;
+    border-radius: 10px;
+    box-shadow: 0 10px 37px -18px #000;
+    padding: 10px;
+}
+
+#D_SeacrhbarStyle {
+    display: grid;
+    grid-template-columns: 30px auto 70px;
+}
+
+#D_SearchIconStyle {
+    margin-right: 15px;
+    margin-top: 3px;
+    color: #0B78FF;
+}
+
+#D_inputStyle {
+    margin-right: 5px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    font-family: 'Arial';
+    color: white;
+    padding-left: 15px;
+}
+
+#D_btnStyle {
+    font-family: 'Arial';
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    margin-top: 8px;
+    font-size: 13px
+}
+
+
+/* --------------------------User Info-------------------------- */
+
+#D_bgColor  {
+    background-color: #1E2A47;
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: 0 10px 37px -18px #000;
+    padding: 20px
+}
+#D_barStyle  {
+    display: flex
+}
+#D_imgNameStyle  {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 12px
+}
+#D_nameStyle  {
+    font-size: 24px;
+    margin: 0;
+    text-decoration: none; 
+    color: #FFFFFF;
+}
+#D_nameStyle:hover {
+    color: #BBBFC7;
+}
+
+#D_uNameStyle  {
+    font-size: 19px;
+    color: #0B78FF;
+    font-family: 'Segoe UI Light';
+    margin-top: -3px;
+    margin-bottom: -2px;
+}
+#D_dateStyle  {
+    font-size: 16px;
+    font-family: 'Segoe UI Light';
+    margin: 0
+}
+#D_bioStyle  {
+    font-size: 16px;
+    font-family: 'Segoe UI Light';
+    margin-top: 20px;
+    margin-bottom: 15px
+}
+#D_bgColorSocial  {
+    background-color: #141D2F;
+    border-radius: 10px
+}
+#D_socialStyle  {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    padding-top: 20px
+}
+#D_socialCountStyle  {
+    font-size: 16px;
+    font-family: 'Segoe UI Light';
+    margin-top: -5px
+}
+#D_otherInfoStyle  {
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: left;
+    padding-top: 20px;
+    font-size: 16px;
+    font-family: 'Segoe UI Light'
+}
+#D_iconStyle  {
+    float: left;
+    margin-right: 12px;
+    margin-top: 2px;
+    color: #4B6A9B;
+}
+#D_socialLink {
+    text-decoration: none;
+    color: white;
+}
+#D_socialLink:hover {
+    color: #0B78FF;
+}
+#D_na {
+    color: #5B668A;
+}
+
+
+
+/********************************************
+----- Light Mode -----
+*********************************************/
+
+/* CardbgColor #FEFEFE
+fontColor  #697E9D
+inputbgCOlor #F6F8FF */
+
+
+/* --------------------------Login/Register-------------------------- */
+#L_logincontainer {
+    background-color: #FEFEFE;
+    margin-top: 10%;
+    border-radius: 10px;
+    box-shadow: 0 10px 37px -18px #000;
+    padding: 40px;
+    max-width: 450px;
+}
+
+#loginForm {
+    font-family: 'Segoe UI Light';
+    font-size: 16px;
+}
+
+#L_regbtn {
+    color: grey;
+    width: 100%;
+}
+#L_regbtn:hover {
+    color: white;
+}
+
+#login_btn {
+    width: 100%;
+}
+
+#L_divider {
+    color: rgb(104, 104, 104);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    display: grid;
+    grid-template-columns: auto 200px auto;
+}
+
+#dividerText {
+    color: #7a8192;
+    text-align: center;
+}
+#L_logininput {
+    background-color: #F6F8FF;
+    color: black;
+}
+
+#L_loginHeader {
+    color: #697E9D;
+}
+
+/* --------------------------App-------------------------- */
+#L_container {
+    margin: auto;
+    max-width: 750px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#L_bodyStyle {
+    margin-top: 40px;
+}
+
+#L_app {
+    font-family: 'Segoe UI';
+    background-color: #F6F8FF;
+    color: #000000;
+    min-height: 100vh;
+}
+
+/* --------------------------SearchBar-------------------------- */
+#L_errorStyle {
+    display: flex;
+    justify-content: right;
+    color: red;
+    font-size: 16px;
+    font-family: 'Segoe UI Light';
+}
+
+#L_SearchbgColor {
+    background-color: #FEFEFE;
+    border-radius: 10px;
+    box-shadow: 0 10px 37px -18px #000;
+    padding: 10px;
+}
+
+#L_SeacrhbarStyle {
+    display: grid;
+    grid-template-columns: 30px auto 70px;
+}
+
+#L_SearchIconStyle {
+    margin-right: 15px;
+    margin-top: 3px;
+    color: #0B78FF;
+}
+
+#L_inputStyle {
+    margin-right: 5px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    font-family: 'Arial';
+    color: black;
+    padding-left: 15px;
+}
+
+#L_btnStyle {
+    font-family: 'Arial';
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    margin-top: 8px;
+    font-size: 13px
+}
+
+/* --------------------------Header-------------------------- */
+#L_headerStyle {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
+}
+
+#L_logoStyle {
+    font-size: 28px;
+    margin-top: 40px;
+}
+
+#L_dLightStyle {
+    margin-top: 50px;
+    font-size: 16px;
+    text-align: right;
+    font-family: 'Segoe UI Light';
+    cursor: pointer;
+}
+
+#L_dLightTextStyle {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+#L_toggleIcon {
+    color: #A5A5A5;
+}
+
+
+/* --------------------------User Info-------------------------- */
+
+#L_bgColor {
+    background-color: #FEFEFE;
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: 0 10px 37px -18px #000;
+    padding: 20px
+}
+#L_barStyle {
+    display: flex
+}
+
+#L_imgNameStyle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 12px
+}
+
+#L_nameStyle {
+    font-size: 24px;
+    margin: 0;
+    text-decoration: none;
+    color: #697E9D;
+}
+#L_nameStyle:hover {
+    color: #96A3B8;
+}
+
+#L_uNameStyle {
+    font-size: 19px;
+    color: #0B78FF;
+    font-family: 'Segoe UI Light';
+    margin-top: -3px;
+    margin-bottom: -2px;
+}
+
+#L_dateStyle {
+    font-size: 16px;
+    font-family: 'Segoe UI Light';
+    margin: 0;
+    color: #697E9D;
+}
+
+#L_bioStyle {
+    font-size: 16px;
+    font-family: 'Segoe UI Light';
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: #697E9D;
+}
+
+#L_bgColorSocial {
+    background-color: #F6F8FF;
+    border-radius: 10px
+}
+
+#L_socialStyle {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    padding-top: 20px;
+    color: #697E9D;
+}
+
+#L_socialCountStyle {
+    font-size: 16px;
+    font-family: 'Segoe UI Light';
+    margin-top: -5px;
+}
+
+#L_otherInfoStyle {
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: left;
+    padding-top: 20px;
+    font-size: 16px;
+    font-family: 'Segoe UI Light';
+    color: #697E9D;
+}
+#L_socialLink {
+    text-decoration: none;
+    color: #697E9D;
+}
+#L_socialLink:hover {
+    color: #0B78FF;
+}
+#L_na {
+    color: #BBBCC4;
+}
+
+#L_iconStyle {
+    float: left;
+    margin-right: 12px;
+    margin-top: 2px;
+    color: #4B6A9B;
 }
