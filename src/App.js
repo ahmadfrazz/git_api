@@ -9,8 +9,8 @@ import Login from './Components/Login';
 import PageNotFound from './Components/PageNotFound';
 import axios from "axios";
 import { DarkModeContext } from './context/DarkModeContext';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useDispatch, useSelector } from 'react-redux';
+import { BrowserRouter as Router, Routes, Route, useParams } from "react-router-dom";
+import {  useSelector } from 'react-redux';
 
 
 
@@ -19,7 +19,6 @@ const DEFAULT_API = 'https://api.github.com/users/ahmadfrazz';
 
 function App() {
 const darkMode = useSelector((state) => state.themeToggle );
-
 
   // const {darkMode} = useContext(DarkModeContext);
 
@@ -71,10 +70,10 @@ const darkMode = useSelector((state) => state.themeToggle );
           </div> */}
 
           <Header />
-          <Router>
+          {/* <Router> */}
             <Routes>
-              <Route exact path='/user/register' element={<Register />} />
-              <Route exact path='/user/login' element={<Login />} />
+              <Route exact path='/register' element={<Register />} />
+              <Route exact path='/login' element={<Login />} />
               <Route exact path='/user/:id' element={
                                                   <div className="bodyStyle" id={darkMode === 'DARK' ? 'D_bodyStyle' : 'L_bodyStyle'} >
                                                     <SearchBar searchT={searchHandler} error={error} />
@@ -85,7 +84,7 @@ const darkMode = useSelector((state) => state.themeToggle );
               <Route path='*' element={<PageNotFound />} />
 
             </Routes>
-          </Router>
+          {/* </Router> */}
 
 
         </div>

@@ -16,6 +16,10 @@ const darkMode = useSelector((state) => state.themeToggle )
 const state = useSelector((state) => state.userRegister )
 
 
+const ustate = useSelector((state) => state.userRegister );
+
+
+
 
 
   // const [passwordType, setPasswordType] = useState("password");
@@ -98,27 +102,32 @@ const onSubmitHandler = (e) => {
     setAlert({error: true});
     return;
   }
-  const user = {
-    id: uuidv4(),
-    uname,
-    email,
-    password
-  }
-  if(password === confirm_password){
-    dispatch({ type: 'REGISTER', payload: user});
-    setAlert({success: true, error: false});
-    setNewuser({
-      id: '',
-      uname: '',
-      email: '',
-      password: '',
-      confirm_password: '',
-    })
-    // nav('/user/login')
+  const userFound = ustate.users.find((user) => user.email === email ? true : false )
+  if(!userFound){
+    const user = {
+      id: uuidv4(),
+      uname,
+      email,
+      password
+    }
+    if(password === confirm_password){
+      dispatch({ type: 'REGISTER', payload: user});
+      setAlert({success: true, error: false});
+      setNewuser({
+        id: '',
+        uname: '',
+        email: '',
+        password: '',
+        confirm_password: '',
+      })
+      nav('/login')
+    }else{
+      setAlert({success: false, error: true});
+    }
+    console.log(state.users);
   }else{
-    setAlert({success: false, error: true});
+    setAlert({error: true});
   }
-  console.log(state.users);
 }
 
 
@@ -130,13 +139,13 @@ const {success, error} = alert;
       {success ?
       <div className="alert alert-success alert-dismissible" role="alert">
         <strong>Congrats!</strong> Account created successfully.
-        <Link to="/user/login"className="alert-link" >Sign In here...</Link>
+        <Link to="/login"className="alert-link" >Sign In here...</Link>
         {/* <button type="button" className="close" data-bs-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> */}
       </div> : null}
 
       {error ?
       <div className="alert alert-danger alert-dismissible" role="alert">
-        <strong>Oops!</strong> Password doesn't match..
+        <strong>Oops!</strong> Email already exist..
         {/* <button type="button" className="close" data-bs-dismiss="alert" aria-label="Close"><span>&times;</span></button> */}
       </div> : null}
 

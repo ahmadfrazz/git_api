@@ -7,6 +7,13 @@ users: [
         uname: "aa",
         email: "aa@aa.com",
         password: "41"
+        },
+        {
+            isLogin: false,
+            id: "b6859b61-70dd-4945-ba21-605e28cca43r",
+            uname: "Ahmad",
+            email: "ahmad@a.com",
+            password: "41"
         }
     ]
     }
@@ -50,6 +57,29 @@ const RegisterReducer = (state = initialState,  action) => {
                     }
                 })
             }
+            case 'LOGOUT':
+                {
+                    state.users.find((user) => {
+                        if(user.id === action.payload)
+                        {
+                            return state = {
+                                users: [
+                                    // ...state.users,
+                                ...state.users.filter((user) => user.id !==  action.payload),
+                                    {
+                                        isLogin: false,
+                                        // ...user
+                                        id: user.id,
+                                        uname: user.uname,
+                                        email: user.email,
+                                        password: user.password
+                                    }
+                                ]
+                            }
+                        }
+                        // console.log(state);
+                    })
+                }
                 // const user_found = state.users.filter((user) => {
                 //     if(user.email === action.payload.email && user.password === action.payload.password){
                 //         return user;
