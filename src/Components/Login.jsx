@@ -81,11 +81,13 @@ const uhelp = () => {
         <div id="loginForm" >
           
           <form onSubmit={onSubmitHandler}>
-            <div className="form-group mb-4">
+            <div className="form-floating mb-4">
               <input type="email" className="form-control" vlaue={email} onChange={e => setEmail(e.target.value)} id={darkMode === 'DARK' ? 'D_logininput' : 'L_logininput'} aria-describedby="emailHelp" placeholder="Enter email..." autoFocus />
+              <label for="floatingInput" id='floatingLabel'>Enter Email</label>
             </div>
-            <div className="form-group mb-4">
+            <div className="form-floating mb-4">
               <input type="password" className="form-control" vlaue={password} onChange={e => setPassword(e.target.value)} id={darkMode === 'DARK' ? 'D_logininput' : 'L_logininput'} placeholder="Enter password..." />
+              <label for="floatingInput" id='floatingLabel'>Password</label>
             </div>
             <div>
               <button type="submit" className="btn btn-primary mt-1" id="login_btn" >Log in</button>

@@ -149,31 +149,35 @@ const {success, error} = alert;
         {/* <button type="button" className="close" data-bs-dismiss="alert" aria-label="Close"><span>&times;</span></button> */}
       </div> : null}
 
-      <div className='container' id={darkMode === 'DARK' ? 'D_logincontainer' : 'L_logincontainer'} >
+      <div className='container p-5' id={darkMode === 'DARK' ? 'D_logincontainer' : 'L_logincontainer'} >
 
         <h3 className='text-center mb-5' id={darkMode === 'DARK' ? 'D_loginHeader' : 'L_loginHeader'} >Register</h3>
         <div id="loginForm" >
           <form onSubmit={onSubmitHandler}>
-            <div className="form-group mb-4">
+            <div className="form-floating mb-4">
               <input type="text" name='uname' className={classnames('form-control', { 'is-invalid': inputError.uname, 'is-valid': uname})} vlaue={uname} onChange={handleChange} id={darkMode === 'DARK' ? 'D_logininput' : 'L_logininput'} placeholder="Enter name..." autoFocus />
+              <label for="floatingInput" id='floatingLabel'>Enter Name</label>
             {inputError.uname ? <div className='invalid-feedback'>{inputError.uname}</div> : null}
             </div>
-            <div className="form-group mb-4">
+            <div className="form-floating mb-4">
               <input type="email" name='email' className={classnames('form-control', { 'is-invalid': inputError.email, 'is-valid': email })} vlaue={email} onChange={handleChange} id={darkMode === 'DARK' ? 'D_logininput' : 'L_logininput'} placeholder="Enter email..."  />
+              <label for="floatingInput" id='floatingLabel'>Enter Email</label>
               {inputError.email ? <div className='invalid-feedback'>{inputError.email}</div> : null}
             </div>
             <div className="mb-4" style={{display: 'grid' , gridTemplateColumns: 'auto auto', gridGap: '10px'}}>
-              <div className="form-group">
+              <div className="form-floating">
                 <input type="password" name='password' className={classnames('form-control', { 'is-invalid': inputError.password, 'is-valid': password })} vlaue={password} onChange={handleChange} id={darkMode === 'DARK' ? 'D_logininput' : 'L_logininput'} placeholder="Enter password..."  />
+                <label for="floatingInput" id='floatingLabel'>Enter Password</label>
                 {inputError.password ? <div className='invalid-feedback'>{inputError.password}</div> : null}
               </div>
-              <div className="form-group">
+              <div className="form-floating">
                 <input type="password" name='confirm_password' className={classnames('form-control', { 'is-invalid': inputError.confirm_password, 'is-valid': validate })} vlaue={confirm_password} onChange={handleChange} id={darkMode === 'DARK' ? 'D_logininput' : 'L_logininput'} placeholder="Confirm password..."  />
+                <label for="floatingInput" id='floatingLabel'>Confirm Password</label>
                 {inputError.confirm_password ? <div className='invalid-feedback'>{inputError.confirm_password}</div> : null}          
               </div>
             </div>
             <div>
-              <button type="submit" className="btn btn-primary mt-1" id="login_btn" >Sign Up</button>
+              <button type="submit" className="btn btn-primary mt-1" id="login_btn" ><span>Sign Up </span></button>
             </div>
           </form>
 

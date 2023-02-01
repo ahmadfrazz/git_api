@@ -46,10 +46,18 @@
 #D_logininput{
     background-color: #141D2F;
     color: white;
+    border: 1px solid #6C757D;
+}
+#D_logininput:focus{
+    color: white
 }
 #D_loginHeader{
     color: white;
 }
+#floatingLabel{
+    color: #6C757D
+}
+
 
 
 
@@ -90,10 +98,32 @@
     font-family: 'Segoe UI Light';
     cursor: pointer;
 }
+#D_dLightStyle1 {
+    margin-top: 50px;
+    font-size: 16px;
+    text-align: right;
+    font-family: 'Segoe UI Light';
+    cursor: pointer;
+}
 
 #D_dLightTextStyle {
     vertical-align: middle;
     margin-right: 10px;
+}
+#D_toggleIcon {
+    color: white;
+}
+#D_toggleIconBG > svg{
+    height: 33px;
+    width: auto;
+    padding: 7px;
+}
+#D_dLightStyle1:hover{
+    /* height: auto; */
+    width: auto;
+    padding-left: 7px;
+    background-color: #80808066;
+    border-radius: 8px;
 }
 
 
@@ -269,6 +299,12 @@ inputbgCOlor #F6F8FF */
 
 #login_btn {
     width: 100%;
+    height: 56px;
+    background-color: #6b5bf8;
+    border: none;
+}
+#login_btn:hover {
+    background-color: #5d4bf8;
 }
 
 #L_divider {
@@ -377,6 +413,13 @@ inputbgCOlor #F6F8FF */
     font-family: 'Segoe UI Light';
     cursor: pointer;
 }
+#L_dLightStyle1 {
+    margin-top: 50px;
+    font-size: 16px;
+    text-align: right;
+    font-family: 'Segoe UI Light';
+    cursor: pointer;
+}
 
 #L_dLightTextStyle {
     vertical-align: middle;
@@ -384,6 +427,19 @@ inputbgCOlor #F6F8FF */
 }
 #L_toggleIcon {
     color: #A5A5A5;
+}
+
+#L_toggleIconBG > svg{
+    height: 33px;
+    width: auto;
+    padding: 7px;
+}
+#L_dLightStyle1:hover{
+    /* height: auto; */
+    width: auto;
+    padding-left: 7px;
+    background-color: #d3d3d366;
+    border-radius: 8px;
 }
 
 

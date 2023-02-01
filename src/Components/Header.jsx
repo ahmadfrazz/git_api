@@ -54,17 +54,19 @@ const user_state = useSelector((state) => state.userRegister );
       <div id={darkMode === 'DARK' ? 'D_logoStyle' : 'L_logoStyle'}>
         devfinder
       </div>
-      <div id={darkMode === 'DARK' ? 'D_dLightStyle' : 'L_dLightStyle'} onClick={modeToggel}>
+      <div id={darkMode === 'DARK' ? 'D_dLightStyle1' : 'L_dLightStyle1'} onClick={modeToggel}>
         <span id={darkMode === 'DARK' ? 'D_dLightTextStyle' : 'L_dLightTextStyle'}>
           {darkMode === 'DARK' ? <span>LIGHT</span> : <span style={{color: '#A5A5A5'}}>DARK</span> }
         </span>
         <span style={{transition: 'all .3s ease-in-out'}}>
+          <span id={darkMode === 'DARK' ? 'D_toggleIconBG' : 'L_toggleIconBG'}>
           { darkMode === 'DARK' ? <BsSunFill size={20} id={darkMode === 'DARK' ? 'D_toggleIcon' : 'L_toggleIcon'} />
-          : <BsMoonFill size={18} id={darkMode === 'DARK' ? 'D_toggleIcon' : 'L_toggleIcon'} />
+          : <BsMoonFill size={20} id={darkMode === 'DARK' ? 'D_toggleIcon' : 'L_toggleIcon'} />
           }
+          </span>
         </span>
       </div>
-        <span style={{marginLeft: '15px', marginRight: '10px', color: '#45618F', marginTop: '50px'}}>|</span>
+        <span className='vr' style={{height: '23px', marginTop: '53px', marginLeft: '15px', marginRight: '15px',}}></span>
       <div id={darkMode === 'DARK' ? 'D_dLightStyle' : 'L_dLightStyle'}>
         {/* <Link href='/user/login'> */}
           <span onClick={logoutHandler} >
@@ -76,7 +78,9 @@ const user_state = useSelector((state) => state.userRegister );
                   <GoSignOut size={18} id={darkMode === 'DARK' ? 'D_toggleIcon' : 'L_toggleIcon'} />
                 </span>
                 </span>  
-                : <Link to="/login" style={{textDecoration: 'none'}} id={darkMode === 'DARK' ? 'D_dLightTextStyle' : 'L_dLightTextStyle'} >Login</Link>} </span> 
+                : 
+                <Link to="/login" style={{height: '30px', padding: '2px 10px', fontSize: '14px'}} className="btn btn-primary" id={darkMode === 'DARK' ? 'D_dLightTextStyle' : 'L_dLightTextStyle'} >Login</Link>
+                } </span> 
             }
             
             
